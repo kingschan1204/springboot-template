@@ -1,2 +1,2 @@
 # springboot-template
-define spring boot project for quick start devloper .
+define spring boot project for quick start developer .
