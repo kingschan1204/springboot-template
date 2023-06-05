@@ -1,0 +1,7 @@
+# actuator配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /actuator

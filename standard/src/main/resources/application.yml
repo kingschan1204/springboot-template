@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  tomcat:
+    threads:
+      max: 50
+    uri-encoding: utf-8
+    connection-timeout: 30000
+spring:
+  application:
+    name: standard
+# 日志文件输出位置
+logging:
+  file:
+    path: ./logs
