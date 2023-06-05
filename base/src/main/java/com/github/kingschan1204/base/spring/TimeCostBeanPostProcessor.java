@@ -1,4 +1,4 @@
-package com.github.kingschan1204.standard.helper.spring;
+package com.github.kingschan1204.base.spring;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
