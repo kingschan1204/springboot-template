@@ -30,6 +30,7 @@
         <fastjson.version>2.0.25</fastjson.version>
         <mysql.version>8.0.13</mysql.version>
         <base.version>1.0-SNAPSHOT</base.version>
+        <hikaricp.version>4.0.3</hikaricp.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -67,7 +68,12 @@
                 <artifactId>base</artifactId>
                 <version>${base.version}</version>
             </dependency>
-
+            <!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${hikaricp.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>

@@ -76,4 +76,6 @@
         <appender-ref ref="FILE_INFO_LOG"/>
         <appender-ref ref="FILE_ERROR_LOG"/>
     </root>
+    <!--连接池信息输出-->
+    <logger name="com.zaxxer.hikari" level="DEBUG" />
 </configuration>

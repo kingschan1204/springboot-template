@@ -5,9 +5,27 @@ server:
       max: 50
     uri-encoding: utf-8
     connection-timeout: 30000
+
 spring:
+  profiles:
+    active: dev
   application:
     name: standard
+  # 配置数据库
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-test-query: SELECT 1
+      connection-timeout: 60000
+      idle-timeout: 500000
+      leak-detection-threshold: 20000
+      max-lifetime: 540000
+      maximum-pool-size: 20
+      minimum-idle: 10
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://${MYSQL_HOST}/${MYSQL_DB}?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&autoReconnect=true&rewriteBatchedStatements=true
+    username: ${USER}
+    password: ${PSW}
 # 日志文件输出位置
 logging:
   file:
