@@ -1,0 +1,2 @@
+org.springframework.boot.SpringApplicationRunListener=\
+com.github.kingschan1204.base.spring.MyApplicationRunListener
