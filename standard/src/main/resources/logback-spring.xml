@@ -7,10 +7,14 @@
     <property name="PATTERN"
               value=" %d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%thread] [%X{requestId}] %logger{50} [%line] - %msg%n"/>
 
-    <property name="CONSOLE_LOG_PATTERN" value="%clr(%date{yyyy-MM-dd HH:mm:ss.SSS}){blue} %clr(-){faint}%clr(%5level) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%thread]){yellow} %clr(%logger){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/> <!-- 自定义彩色日志格式配置，自定义属性，可以使"${}"来使用变量，faint  blue yellow magenta orange cyan -->
-    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" /> <!--日志格式和颜色渲染，彩色日志依赖的渲染类 -->
-    <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
-    <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
+    <property name="CONSOLE_LOG_PATTERN"
+              value="%clr(%date{yyyy-MM-dd HH:mm:ss.SSS}){blue} %clr(-){faint}%clr(%5level) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%thread]){yellow} %clr(%logger){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/> <!-- 自定义彩色日志格式配置，自定义属性，可以使"${}"来使用变量，faint  blue yellow magenta orange cyan -->
+    <conversionRule conversionWord="clr"
+                    converterClass="org.springframework.boot.logging.logback.ColorConverter"/> <!--日志格式和颜色渲染，彩色日志依赖的渲染类 -->
+    <conversionRule conversionWord="wex"
+                    converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>
+    <conversionRule conversionWord="wEx"
+                    converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter"/>
     <!-- %date 时间格式-->
     <!-- %level 日志级别-->
     <!-- %thread 日志所在线程名-->
@@ -77,5 +81,7 @@
         <appender-ref ref="FILE_ERROR_LOG"/>
     </root>
     <!--连接池信息输出-->
-    <logger name="com.zaxxer.hikari" level="DEBUG" />
+    <logger name="com.zaxxer.hikari" level="DEBUG"/>
+    <!--jdbc信息输出-->
+    <logger name="org.springframework.jdbc" level="DEBUG"/>
 </configuration>

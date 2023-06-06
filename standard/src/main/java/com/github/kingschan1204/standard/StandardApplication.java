@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * @author kingschan
  */
+
 @ComponentScan(value = {"com.github.kingschan1204"})
 @SpringBootApplication
 public class StandardApplication {

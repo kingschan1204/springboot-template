@@ -1,5 +1,9 @@
 # actuator配置
 management:
+  endpoint:
+    health:
+      #输出健康检查的详细信息
+      show-details: always
   endpoints:
     web:
       exposure:

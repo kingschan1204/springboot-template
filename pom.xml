@@ -31,6 +31,7 @@
         <mysql.version>8.0.13</mysql.version>
         <base.version>1.0-SNAPSHOT</base.version>
         <hikaricp.version>4.0.3</hikaricp.version>
+        <swagger.version>3.0.0</swagger.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -74,6 +75,18 @@
                 <artifactId>HikariCP</artifactId>
                 <version>${hikaricp.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
     <build>
